@@ -5,7 +5,7 @@ function Layout() {
   return (
     <LayoutWrap>
       <Title>
-        <Link to="/">Game Box PC</Link>
+        <Link to="/">Game Box</Link>
       </Title>
       <Outlet />
     </LayoutWrap>

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { DflexCenter } from "../common";
+import { Dflex, DflexCenter } from "../common";
 
 // Layout page
 export const LayoutWrap = styled.div`
@@ -7,8 +7,7 @@ export const LayoutWrap = styled.div`
   flex-direction: column;
   padding: 50px 20px;
   margin: 0 auto;
-  width: 100%;
-  max-width: 600px;
+  width: 600px;
   height: 100vh;
   background-color: #191f2c;
 `;
@@ -45,4 +44,24 @@ export const HomeWrap = styled(DflexCenter)`
     background-color: #b14545;
     border-radius: 30px;
   }
+`;
+export const Games = styled.figure`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+  text-align: center;
+  .img {
+    &__dice {
+      height: 100px;
+    }
+    &__hands {
+      width: 50px;
+      padding: 25px 0;
+    }
+  }
+`;
+export const ImgCenter = styled(Dflex)`
+  padding: 25px 0;
+  justify-content: center;
 `;
