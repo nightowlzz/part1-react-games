@@ -1,9 +1,9 @@
 import dise from "../assets/gameDise/logo.png";
-import rps1 from "../assets/GameRPS/scissor.svg";
-import rps2 from "../assets/GameRPS/rock.svg";
-import rps3 from "../assets/GameRPS/paper.svg";
+import rps1 from "../assets/gameRPS/scissor.svg";
+import rps2 from "../assets/gameRPS/rock.svg";
+import rps3 from "../assets/gameRPS/paper.svg";
 import { Link } from "react-router-dom";
-import { Games, HomeWrap, ImgCenter } from "../styles/pages/styles";
+import { Games, HomeWrap, ImgCenter } from "../styles/pages/home";
 
 export const HOME_IMAGES = {
   dise: [dise],

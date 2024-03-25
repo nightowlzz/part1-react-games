@@ -1,27 +1,6 @@
 import styled from "styled-components";
 import { Dflex, DflexCenter } from "../common";
 
-// Layout page
-export const LayoutWrap = styled.div`
-  display: flex;
-  flex-direction: column;
-  padding: 50px 20px;
-  margin: 0 auto;
-  width: 600px;
-  height: 100vh;
-  background-color: #191f2c;
-`;
-
-export const Title = styled.h1`
-  flex: 1;
-  text-align: center;
-  a {
-    font-size: 32px;
-    font-weight: bold;
-  }
-`;
-
-// Home page
 export const HomeWrap = styled(DflexCenter)`
   flex: 11;
   display: grid;
