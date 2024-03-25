@@ -61,14 +61,18 @@ function GameDice() {
       </div>
       <div className="App-boards">
         <DiceBoard
-          winner={gameWinner(myDice, youDice)}
+          winner={
+            myScore === 0 && youScore === 0 ? "" : gameWinner(myDice, youDice)
+          }
           number={myDice}
           color={"blue"}
           list={myWinList && myWinList.join(", ")}
           score={myScore}
         />
         <DiceBoard
-          winner={gameWinner(youDice, myDice)}
+          winner={
+            myScore === 0 && youScore === 0 ? "" : gameWinner(youDice, myDice)
+          }
           number={youDice}
           color={"red"}
           list={youWinList && youWinList.join(", ")}

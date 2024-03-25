@@ -192,7 +192,7 @@
 .GameRPS {
   position: relative;
   width: 100%;
-  margin: 45px auto;
+  margin: 0 auto;
   padding: 50px;
   border-radius: 44px;
   text-align: center;
