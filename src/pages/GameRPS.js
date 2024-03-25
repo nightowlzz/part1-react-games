@@ -8,6 +8,7 @@ import {
   generateRandomHand,
 } from "../components/gameRPS/utils";
 import Score from "../components/gameRPS/Score";
+import { Helmet } from "react-helmet";
 
 const INITIAL_HAND = "rock";
 function GameRPS() {
@@ -48,6 +49,9 @@ function GameRPS() {
 
   return (
     <div className="GameRPS">
+      <Helmet>
+        <title>가위바위보 게임</title>
+      </Helmet>
       <h1 className="App-heading">가위바위보</h1>
       <img
         className="App-reset"

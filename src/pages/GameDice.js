@@ -3,6 +3,7 @@ import "../styles/pages/dice.css";
 import logo from "../assets/gameDise/logo.png";
 import DiceButton from "../components/gameDice/DiceButton";
 import DiceBoard from "../components/gameDice/DiceBoard";
+import { Helmet } from "react-helmet";
 
 const INITIAL_NUMBER = 0;
 
@@ -47,6 +48,9 @@ function GameDice() {
 
   return (
     <section className="GameDice">
+      <Helmet>
+        <title>주사위 게임</title>
+      </Helmet>
       <div>
         <img className="App-logo" src={logo} alt="주사위게임 로고" />
         <h1 className="App-title">주사위게임</h1>
