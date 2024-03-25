@@ -8,7 +8,7 @@ const HAND_IMAGES = {
   paper,
 };
 
-export default function HandImage({ className = "HandButton-icon", value }) {
+export default function HandImage({ imgClassName, value }) {
   const src = `${HAND_IMAGES[value]}`;
-  return <img className={className} src={src} alt={value} />;
+  return <img className={imgClassName} src={src} alt={value} />;
 }

@@ -1,5 +1,6 @@
 export const HAND = ["rock", "scissor", "paper"];
-export const WINS = {
+
+const WINS = {
   rock: "scissor",
   scissor: "paper",
   paper: "rock",
@@ -11,7 +12,7 @@ export function getResult(left, right) {
   return "무승부";
 }
 
-export function Random() {
+function Random() {
   return Math.floor(Math.random() * HAND.length);
 }
 

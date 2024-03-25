@@ -1,13 +1,13 @@
 import "../styles/pages/rps.css";
 import reset from "../assets/gameRPS/ic-reset.svg";
-import HandImage from "../components/gameRPS/HandImage";
-import HandButton from "../components/gameRPS/HandButton";
+import HandlerHand from "../components/gameRPS/HandlerHand";
 import { useState } from "react";
 import {
   HAND,
   getResult,
   generateRandomHand,
 } from "../components/gameRPS/utils";
+import Score from "../components/gameRPS/Score";
 
 const INITIAL_HAND = "rock";
 function GameRPS() {
@@ -41,6 +41,8 @@ function GameRPS() {
     setMyHand(INITIAL_HAND);
     setYouHand(INITIAL_HAND);
     setGameHistory([]);
+    setMyScore(0);
+    setYouScore(0);
     setBet(1);
   };
 
@@ -55,26 +57,26 @@ function GameRPS() {
       />
 
       <div className="App-scores">
-        <div className="Score">
-          <div className="Score-num">{myScore}</div>
-          <div className="Score-name">나</div>
-        </div>
+        <Score score={myScore}>나</Score>
         <div className="App-versus">:</div>
-        <div className="Score">
-          <div className="Score-num">{youScore}</div>
-          <div className="Score-name">상대</div>
-        </div>
+        <Score score={youScore}>상대</Score>
       </div>
       <div className="Box App-box">
         <div className="Box-inner">
           <div className="App-hands">
-            <div className="Hand">
-              <HandImage className="Hand-icon" value={myHand} />
-            </div>
+            <HandlerHand
+              as={"div"}
+              className={"Hand"}
+              imgClassName={"Hand-icon"}
+              value={myHand}
+            />
             <div className="App-versus">VS</div>
-            <div className="Hand">
-              <HandImage className="Hand-icon" value={youHand} />
-            </div>
+            <HandlerHand
+              as={"div"}
+              className={"Hand"}
+              imgClassName={"Hand-icon"}
+              value={youHand}
+            />
           </div>
           <div className="App-bet">
             <span>배점</span>
@@ -89,13 +91,13 @@ function GameRPS() {
             <span>배</span>
           </div>
           <div className="App-history">
-            <h2>승부기록</h2>
+            <h2>나의 승부기록</h2>
             <p>{gameHistory.join(", ")}</p>
           </div>
         </div>
       </div>
       {HAND.map((data, i) => (
-        <HandButton key={i} value={data} onClick={handBtnClick} />
+        <HandlerHand key={i} value={data} onClick={handBtnClick} />
       ))}
     </div>
   );
