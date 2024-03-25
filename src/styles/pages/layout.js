@@ -6,8 +6,8 @@ export const LayoutWrap = styled.div`
   flex-direction: column;
   padding: 50px 20px;
   margin: 0 auto;
-  width: 600px;
-  height: 100vh;
+  width: 650px;
+  min-height: 100vh;
   background-color: #191f2c;
 `;
 
